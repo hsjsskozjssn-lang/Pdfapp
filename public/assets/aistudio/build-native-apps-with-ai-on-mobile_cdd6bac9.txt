@@ -1,0 +1,680 @@
+Build Native Apps with AI on Mobile | No PC (2026) 🔥
+Adept Code - https://adeptcode.in/adeptcode/
+
+=== 1. ChatGpt Prompt for Genrating Detailed Prompt ===
+Hume is tarah ka ek pdf maker and Document Scanner App banana hai. Jisse hum easily apne gallery se images ko pdf me convert kar sake. Ya Camera se physical documents scan karke use pdf me convert kar sake. Use Save and share kar sake. Theme Pink Color ka hoga.
+Is app ko google ai studio se build karke ke liye Hume ek complete detailed prompt genrate karke do.
+
+=== 2. Complete App Prompt ===
+PROJECT: PINKORA PDF — PREMIUM ANDROID PDF MAKER & DOCUMENT SCANNER
+
+Act as a senior Android engineer, expert UI/UX designer, mobile application architect, and QA engineer.
+
+Build a complete, functional, premium-quality native Android application named Pinkora PDF. This must be a real working document scanner and PDF maker, not a static mockup, not a landing page, and not a non-functional UI prototype.
+
+The app should take inspiration from the usability and scanning workflow of professional document scanner applications such as CamScanner, while having its own original branding, layout, icons, and premium pink visual identity. Do not copy another app's logo, screenshots, proprietary assets, or exact design.
+
+1. PLATFORM AND TECHNICAL REQUIREMENTS
+
+- Target platform: Native Android.
+- Language: Kotlin.
+- UI framework: Jetpack Compose with Material 3.
+- Architecture: Clean, maintainable architecture using MVVM and repositories where appropriate.
+- Minimum supported Android version: Android 8.0 (API 26), where compatible with selected dependencies.
+- Use current stable Android libraries compatible with the selected Android SDK.
+- Use Android Photo Picker or the appropriate Storage Access Framework for gallery and document selection.
+- Use CameraX or Google's ML Kit Document Scanner API for document scanning, depending on API compatibility and implementation reliability.
+- Use Android's native PdfDocument API or a reliable maintained PDF library to generate valid PDF files.
+- Use Kotlin Coroutines and lifecycle-aware state management.
+- Use Activity Result APIs for launching system pickers and handling camera/scanner results.
+- Store user-created documents locally by default.
+- No mandatory login or account creation.
+- Do not require a backend for basic PDF creation and scanning.
+- Never expose API keys, secrets, or credentials in the client application.
+- Use a modular code structure with separate UI, state, scanning, image processing, PDF generation, file management, and sharing components.
+
+Before coding, inspect the selected AI Studio environment and available dependencies. Implement the most reliable complete solution, and do not claim a dependency or API is integrated unless the project actually includes it.
+
+2. APP BRANDING AND VISUAL IDENTITY
+
+App name: Pinkora PDF
+
+Tagline: Scan. Create. Save. Share.
+
+Create an original, modern, premium brand identity.
+
+Color palette
+
+- Primary pink: #E83E8C
+- Deep pink: #C92B72
+- Soft pink background: #FFF4F8
+- Light pink surface: #FFE3EE
+- White: #FFFFFF
+- Primary text: #24212A
+- Secondary text: #77717B
+- Success green: #1FA971
+- Error red: #D9364F
+
+Use white and very light pink for most surfaces. Apply pink to primary buttons, selected icons, highlights, progress indicators, floating action buttons, and important actions.
+
+Avoid excessive gradients, excessive shadows, childish styling, and unnecessary decoration.
+
+Design style
+
+- Premium, minimal, clean, modern Android interface.
+- Rounded cards with approximately 16–24 dp corner radii.
+- Consistent spacing based on an 8 dp grid.
+- Readable typography with clear visual hierarchy.
+- High-quality vector icons.
+- Smooth, subtle animations.
+- Proper Android status bar, navigation bar, system insets, and edge-to-edge layout.
+- Responsive layouts for small phones, large phones, and tablets.
+- Light theme as the default.
+- Accessible contrast, content descriptions, and touch targets of approximately 48 dp or larger.
+
+Use original vector assets where necessary. Do not use emojis as substitutes for primary application icons.
+
+3. APP NAVIGATION
+
+Create a fully functional application with four main bottom navigation destinations:
+
+1. Home
+2. My Files
+3. Tools
+4. Settings
+
+Use a clean white bottom navigation bar with pink selected-state indicators.
+
+The central Home screen should have an easily accessible scan action. All navigation items must open real screens and preserve appropriate state.
+
+Support Android back navigation correctly, including back navigation from the scanner, image editor, PDF preview, and dialogs.
+
+4. HOME SCREEN DESIGN
+
+Design a polished home screen inspired by premium productivity applications.
+
+Header
+
+- Original Pinkora PDF logo.
+- Greeting or concise welcome message.
+- Small settings or profile icon, without requiring a user account.
+
+Main hero card
+
+Create a visually attractive pale-pink hero card with the heading:
+
+"Your Documents, Perfectly Organized"
+
+Supporting text:
+
+"Scan documents and create PDFs in seconds."
+
+Add a prominent pink button labeled "Scan Document".
+
+Main action cards
+
+Create four clear action cards:
+
+A. Gallery to PDF
+
+- Icon: images or photo stack.
+- Description: "Turn photos into a PDF."
+- Opens the system photo picker.
+
+B. Scan Document
+
+- Icon: document scanner.
+- Description: "Scan paper documents."
+- Opens the document scanning workflow.
+
+C. Create PDF
+
+- Icon: file plus.
+- Description: "Combine images and documents."
+- Opens the source selection and PDF creation flow.
+
+D. My PDFs
+
+- Icon: PDF file or folder.
+- Description: "View and manage saved PDFs."
+- Opens the local document library.
+
+Below these cards, include a "Recent Documents" section.
+
+Display recently created PDFs with:
+
+- A generated document thumbnail where available.
+- File name.
+- Creation date.
+- Number of pages.
+- File size.
+- A contextual menu with Open, Rename, Share, and Delete.
+
+If there are no documents, show an elegant empty state with a pink document illustration and a "Create your first PDF" button.
+
+Do not show fabricated document records as real saved files. Sample data may be used only in a clearly identified demo or preview mode.
+
+5. FEATURE ONE: GALLERY IMAGES TO PDF
+
+This is one of the most important features.
+
+Implement a complete, working workflow that lets users select multiple images from their phone and convert them into a single PDF.
+
+Workflow
+
+Step 1: User taps "Gallery to PDF".
+
+Step 2: Open the Android system photo picker and allow multi-image selection.
+
+Step 3: Display all selected images in a selection/editor screen.
+
+Step 4: Allow users to:
+
+- Preview each image.
+- Reorder images using drag and drop.
+- Remove unwanted images.
+- Add more images.
+- Rotate individual images.
+- Crop individual images.
+- Choose a page size.
+- Choose page orientation.
+- Select image fit behavior.
+- Choose PDF quality or compression.
+
+Step 5: Ask for a PDF file name.
+
+Step 6: User taps "Create PDF".
+
+Step 7: Generate a valid PDF containing all selected images in the exact chosen order.
+
+Step 8: Show a completion screen with actions to Open PDF, Share PDF, Rename, or Return Home.
+
+Page settings
+
+Support:
+
+- A4.
+- Letter.
+- Original image ratio.
+- Portrait orientation.
+- Landscape orientation.
+- Fit to page.
+- Preserve aspect ratio.
+- Optional white margins.
+
+Prevent images from stretching or becoming distorted.
+
+Each selected image should normally occupy one PDF page unless the user chooses another explicitly supported layout.
+
+Reliability
+
+- Handle large image collections without loading every full-resolution bitmap into memory simultaneously.
+- Decode images efficiently.
+- Respect Android URI permissions.
+- Close file streams and release bitmap resources.
+- Handle unsupported image formats gracefully.
+- Show progress during conversion.
+- Allow cancellation where practical.
+- Detect empty selections.
+- Handle insufficient storage.
+- Never report success until the PDF has actually been written and verified.
+
+6. FEATURE TWO: CAMERA DOCUMENT SCANNER
+
+Implement a real document-scanning workflow.
+
+Prefer Google's ML Kit Document Scanner API if it is compatible with the chosen Android project and available device environment. Otherwise, implement scanning using CameraX and image-processing components.
+
+Do not create a fake camera screen.
+
+Scanner screen
+
+Create a full-screen scanner interface with:
+
+- Live camera preview.
+- Capture button.
+- Flash toggle.
+- Camera permission handling.
+- Gallery import option.
+- Close/back button.
+- Multi-page scan support.
+- Clear guidance for positioning the document.
+
+If the chosen scanner API provides automatic edge detection, cropping, and perspective correction, use those capabilities. If implementing CameraX directly, implement the necessary image-processing workflow rather than pretending that edge detection exists.
+
+Capture workflow
+
+1. User opens Scan Document.
+2. Request camera permission only when needed.
+3. Display the camera preview.
+4. Capture a physical document.
+5. Detect document boundaries when supported.
+6. Crop the document and correct perspective when possible.
+7. Let the user manually adjust the crop if automatic detection is inaccurate.
+8. Apply the selected image enhancement.
+9. Show the captured page preview.
+10. Let the user retake, edit, rotate, delete, or accept the page.
+11. Allow the user to scan additional pages.
+12. Generate a multipage PDF after confirmation.
+
+Scan filters
+
+Implement usable image-processing options:
+
+- Original Color.
+- Color Enhancement.
+- Grayscale.
+- Black & White.
+- High Contrast.
+
+The filter preview must reflect the selected processing operation. Avoid fake filter buttons.
+
+Keep the original captured image available during editing so users can change filters without repeatedly degrading the image.
+
+Scan quality
+
+- Preserve document text readability.
+- Correct rotation where possible.
+- Avoid unnecessary compression.
+- Maintain acceptable output quality for receipts, forms, invoices, letters, and printed documents.
+- Handle low-light conditions gracefully.
+- Show clear errors when a document cannot be captured or processed.
+
+The app must not claim guaranteed OCR, perfect edge detection, or automatic recognition of every document type unless those capabilities are implemented and tested.
+
+7. FEATURE THREE: MULTIPAGE DOCUMENT EDITOR
+
+After scanning or selecting images, provide a dedicated document editor.
+
+Display pages as a scrollable list or grid of thumbnails.
+
+Required actions:
+
+- Reorder pages.
+- Rotate left.
+- Rotate right.
+- Crop.
+- Apply filters.
+- Duplicate a page.
+- Delete a page.
+- Add pages from the camera.
+- Add pages from the gallery.
+- Preview individual pages.
+- Select all pages where appropriate.
+
+Show the total page count.
+
+Changes must update the document state correctly. When generating the PDF, use the final page order and the final edited image state.
+
+Ask for confirmation before destructive actions such as deleting a page or discarding unsaved changes.
+
+8. FEATURE FOUR: PDF CREATION ENGINE
+
+Implement a reliable PDF creation service.
+
+Use Android PdfDocument or another compatible, maintained PDF library.
+
+The PDF creation engine must:
+
+- Create valid PDF files that can be opened by standard PDF readers.
+- Support multipage PDFs.
+- Preserve page order.
+- Support A4 and Letter sizes.
+- Support portrait and landscape layouts.
+- Preserve image aspect ratios.
+- Apply crop, rotation, and image-processing changes.
+- Support optional margins.
+- Allow a user-defined file name.
+- Avoid overwriting existing files silently.
+- Write the final output to an appropriate user-accessible location.
+- Handle storage failures and cancellation.
+- Release document, bitmap, and stream resources correctly.
+
+Use a practical file-naming convention, for example:
+
+Pinkora_Document_2026-10-26_001.pdf
+
+The date in the filename should be generated dynamically from the current date. Allow users to replace the suggested name.
+
+Sanitize filenames and remove invalid filesystem characters.
+
+Show the resulting PDF's actual file size and page count.
+
+Do not generate an empty placeholder file or a file that merely has a .pdf extension.
+
+9. FEATURE FIVE: MY FILES
+
+Build a local PDF library.
+
+Display actual documents created by the user or imported by the user.
+
+Support:
+
+- List view.
+- Grid view.
+- Search by file name.
+- Sort by newest.
+- Sort by oldest.
+- Sort by name.
+- Sort by file size.
+- Open PDF.
+- Share PDF.
+- Rename PDF.
+- Delete PDF.
+- View details.
+- Refresh the document list.
+
+Each document record should contain available metadata:
+
+- Display name.
+- URI or local file reference.
+- Creation or modification date, when available.
+- Page count.
+- File size.
+- Optional thumbnail.
+
+Persist metadata using an appropriate local database or structured local storage.
+
+Use Android's content resolver and storage APIs correctly. Avoid hardcoded filesystem paths that may fail on modern Android versions.
+
+If a file has been moved, deleted externally, or lost access permissions, display a useful error and offer to remove the stale record.
+
+When deleting a document, ask for confirmation and ensure that only the intended file is deleted.
+
+10. FEATURE SIX: PDF VIEWER AND PREVIEW
+
+Create a functional PDF preview screen.
+
+Required capabilities:
+
+- Open generated PDFs.
+- Display pages using Android's PdfRenderer or another reliable PDF rendering solution.
+- Navigate between pages.
+- Zoom in and out where supported.
+- Show the current page and total pages.
+- Share the PDF.
+- Open the document using another compatible application.
+- Return to the document library.
+
+The viewer must handle invalid, empty, corrupted, or inaccessible files gracefully.
+
+Do not display a static image in place of the actual PDF viewer.
+
+11. FEATURE SEVEN: SAVE AND SHARE
+
+Implement real save and share functionality.
+
+Save
+
+Provide a clear "Save PDF" action.
+
+Use an appropriate Android storage mechanism such as the Storage Access Framework's Create Document flow when necessary, or save the file to the app's designated documents location.
+
+Where appropriate, offer an explicit option to export a copy to the user's chosen destination.
+
+Confirm success only after the file is successfully written.
+
+Share
+
+Use Android's native ACTION_SEND intent with the appropriate PDF MIME type and a valid content URI.
+
+Use FileProvider where required for files owned by the application.
+
+Grant temporary read permission to the receiving application.
+
+Allow users to share PDFs through compatible installed apps, including messaging apps, email, cloud storage, and other Android share targets.
+
+Do not hardcode a specific sharing app or assume that a particular application is installed.
+
+Sharing must use the actual generated PDF, not a screenshot or placeholder.
+
+12. FEATURE EIGHT: PDF UTILITIES
+
+Create a Tools screen with useful document utilities.
+
+Implement these features when technically feasible:
+
+1. Images to PDF.
+2. Merge PDFs.
+3. Split PDF by page range.
+4. Extract selected PDF pages.
+5. Rotate PDF pages.
+6. Compress PDF.
+7. Rename PDF.
+8. Share PDF.
+9. View PDF information.
+
+For merging, splitting, extracting, rotating, and compression, use a compatible PDF library that actually supports the required operation.
+
+If a particular operation cannot be implemented reliably in the current environment, clearly mark it as unavailable rather than creating a non-functional button.
+
+Do not silently degrade PDF quality or corrupt existing files.
+
+For compression, offer reasonable quality presets and explain that smaller files may reduce image quality.
+
+If OCR or searchable PDFs are added, implement them using a suitable OCR engine and represent the distinction between a scanned image PDF and a searchable text PDF.
+
+OCR is an optional enhancement, not a requirement for the initial working release.
+
+13. SETTINGS SCREEN
+
+Include:
+
+- App name and version.
+- Theme preference.
+- Default PDF page size.
+- Default image quality.
+- Default output naming preference.
+- Storage and document information.
+- Privacy information.
+- Feedback option, if configured.
+- About section.
+
+Allow users to select Light, Dark, or System theme if all three can be implemented correctly.
+
+Persist settings locally.
+
+Do not add fake account profiles, fake subscription states, fake cloud synchronization, or fake premium purchase screens.
+
+14. PERMISSIONS AND PRIVACY
+
+Request permissions only when a feature requires them.
+
+- Camera permission: for live camera scanning when required by the chosen scanner implementation.
+- Gallery access: use Android Photo Picker where possible to avoid broad media permissions.
+- Storage access: use modern Android storage APIs and the Storage Access Framework as appropriate.
+- Handle permission denial without crashing.
+- Explain why a permission is needed.
+- Provide a graceful recovery path when permission is denied.
+
+The app should process images and create PDFs locally by default.
+
+Do not upload document contents, identity cards, invoices, or personal files to a remote server.
+
+Do not require internet access for core scanning, PDF creation, viewing, saving, and sharing features unless a clearly disclosed optional service requires it.
+
+Do not add analytics or tracking that collects document contents.
+
+15. PERFORMANCE AND ACCESSIBILITY
+
+Optimize for real Android devices, including budget and mid-range phones.
+
+- Use background execution for expensive image and PDF processing.
+- Avoid blocking the main UI thread.
+- Display progress for long operations.
+- Avoid memory leaks.
+- Handle large images using efficient decoding and downsampling where appropriate.
+- Prevent out-of-memory crashes.
+- Use stable state management.
+- Preserve appropriate state during configuration changes.
+- Use accessible labels for icon-only buttons.
+- Maintain readable font sizes.
+- Respect system font scaling where practical.
+
+Use a clear, reusable design system with shared components for buttons, cards, headers, dialogs, progress indicators, and empty states.
+
+16. REQUIRED SCREENS
+
+Build and connect these screens:
+
+1. Home.
+2. Gallery image picker flow.
+3. Selected images and page ordering.
+4. Camera document scanner.
+5. Captured page preview.
+6. Image crop and filter editor.
+7. Multipage document editor.
+8. PDF name and page settings dialog.
+9. PDF generation progress.
+10. PDF creation success screen.
+11. PDF viewer.
+12. My Files library.
+13. File details.
+14. PDF merge/split tools where supported.
+15. Settings.
+16. Permission-denied and error states.
+17. Empty states for new users.
+
+Each screen must have working navigation and meaningful interactions.
+
+17. UI POLISH AND ANIMATIONS
+
+Use subtle animations for:
+
+- Opening and closing the main action cards.
+- Bottom navigation selection.
+- Adding a page.
+- Reordering page thumbnails.
+- PDF generation progress.
+- Successful PDF creation.
+- Empty-state transitions.
+
+Use haptic feedback only for appropriate interactions and when supported.
+
+Do not use excessive animations that slow down document processing.
+
+Provide clear loading, success, and failure feedback.
+
+18. TESTING REQUIREMENTS
+
+Before declaring the app complete, verify the implementation against the following cases:
+
+Test A: Select one image from the gallery and create a PDF.
+
+Test B: Select five images and create one five-page PDF.
+
+Test C: Reorder the images and confirm that the PDF uses the same order.
+
+Test D: Rotate and crop an image, then confirm that the generated PDF reflects these changes.
+
+Test E: Capture a document using the camera and generate a PDF.
+
+Test F: Scan multiple pages and create one multipage PDF.
+
+Test G: Save the PDF to a user-accessible location.
+
+Test H: Open the generated PDF in the in-app viewer.
+
+Test I: Share the actual PDF using the Android share sheet.
+
+Test J: Rename and delete a saved document.
+
+Test K: Deny camera permission and confirm that the app does not crash.
+
+Test L: Cancel image selection or PDF generation and confirm that the UI recovers correctly.
+
+Test M: Handle large images, duplicate filenames, invalid PDFs, unavailable files, and insufficient storage.
+
+Test N: Verify that all primary buttons, menus, bottom navigation items, and back actions work.
+
+Where automated or device-level testing is available, run the relevant tests. Otherwise, inspect the code paths and clearly identify any tests that still require a real Android device.
+
+19. IMPLEMENTATION RULES
+
+Do not stop after generating the home screen.
+
+Do not deliver only a UI prototype.
+
+Do not leave primary actions as TODOs, empty callbacks, or buttons that do nothing.
+
+Do not fake camera captures, gallery selections, PDF previews, PDF files, saving, or sharing.
+
+Do not use hardcoded sample documents as actual user files.
+
+Do not silently replace unavailable functionality with placeholder screens.
+
+Create all necessary Kotlin source files, Compose screens, state models, repositories, utility classes, permission handling, PDF generation logic, manifest declarations, and compatible dependencies.
+
+Use safe error handling and maintainable code.
+
+If a dependency, Android API, or integration is incompatible with the environment, select a reliable alternative and explain the limitation.
+
+Prioritize a fully working core application over a large number of incomplete features.
+
+20. BUILD ORDER
+
+Implement the project in this order:
+
+Phase 1: Project setup, app theme, navigation, and Home screen.
+
+Phase 2: Gallery image selection, multi-image editor, and page ordering.
+
+Phase 3: Real PDF generation, filename handling, and local saving.
+
+Phase 4: PDF viewer, My Files library, and sharing.
+
+Phase 5: Camera scanning, document crop, enhancement, and multipage scanning.
+
+Phase 6: Additional PDF utilities, settings, error handling, and performance improvements.
+
+Phase 7: Build verification, bug fixing, and final UI polish.
+
+After each phase, verify that the project remains buildable and that previously working features still work.
+
+FINAL DELIVERABLE
+
+Deliver a complete, buildable native Android Studio project for Pinkora PDF with:
+
+- Original pink-and-white branding.
+- Professional, polished UI.
+- Working gallery-to-PDF conversion.
+- Working camera document scanning.
+- Multipage PDF creation.
+- Page reordering and basic image editing.
+- PDF preview.
+- Local file management.
+- Save and share functionality.
+- Correct permissions and error handling.
+- A maintainable project structure.
+
+Begin implementation now. First establish the Android project and its core architecture, then implement the actual features in the specified order. Do not stop at a plan or design description. Generate the project code, resolve build errors, and verify the available functionality before declaring completion.
+
+
+=== 3. Bug Fix & Features Add ===
+App ko update karke photo capture ya Gallery se image select karne ke baad manual crop, rotate aur resize ke options add karo, saath hi document edges detect karke automatically perfect crop karne ka system bhi banao. Sabhi filters aur editing tools ko properly functional karo. Image select karne ke baad PDF banane se pehle uska large, clear aur properly fitted preview dikhao, jisme neeche saare editing tools sahi se arranged hon. UI ko device ke Safe Area, status bar, navigation bar aur different screen sizes ke according responsive banao, taaki har device par layout sahi fit ho, koi element cut na ho aur app smooth, professional aur bug-free tarike se kaam kare.
+
+=== 4. Add Test ads & Genrate APK and AAB file ===
+App mein Google AdMob test ads add karo.
+
+Rules:
+
+- Sirf official Google test App ID aur test ad unit IDs use karo
+- AndroidManifest mein AdMob App ID daalo
+- Ads se crash ya UI break na ho
+
+Ad placement:
+
+1. Rewarded Ad: jab user final PDF generate kare, pehle rewarded ad dikhao. Ad poora dekhne ke baad hi PDF generate/download ho. Ad load na ho to fallback do (PDF mil jaye ya retry dikhao).
+2. Interstitial Ad: natural breaks par, jaise ek task/screen complete hone ke baad. Har 3-4 actions mein sirf ek baar, back-to-back nahi.
+3. Banner Ad: main screens ke bottom mein. Form, buttons ya input fields ke upar nahi.
+4. Native/small ads: lists ke beech mein ya home screen par, jahan content ke saath natural lage.
+
+Aap khud sahi jagah decide karo, user experience kharab na ho. Accidental clicks na hon, ads buttons ke paas na lagein (AdMob policy follow karo).
+
+Final build do:
+
+1. Signed release APK (testing ke liye)
+2. Signed release AAB (Play Store upload ke liye)
+
+Aakhir mein batao: kaunsa ad kahan lagaya, test IDs kahan hain (baad mein real IDs se replace karni hain), aur build kaise banaya.
+
